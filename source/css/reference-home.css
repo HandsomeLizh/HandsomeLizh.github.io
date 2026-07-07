@@ -65,24 +65,21 @@
 .reference-home nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
 }
 
 .reference-home .site-logo {
-  flex-shrink: 0;
-  padding: 10px 0;
-  color: var(--second-color);
-  font-weight: 700;
-  text-decoration: none;
+  display: none;
 }
 
 .reference-home nav ul {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 14px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0;
   padding: 0;
   margin: 0;
 }
@@ -93,6 +90,8 @@
 }
 
 .reference-home nav a {
+  display: block;
+  padding: 10px 0;
   color: var(--second-color);
   font-weight: 700;
   text-decoration: none;
