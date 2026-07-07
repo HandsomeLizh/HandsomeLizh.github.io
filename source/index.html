@@ -2,7 +2,7 @@
 layout: false
 ---
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,28 +10,30 @@ layout: false
     <title>lizh</title>
     <link rel="shortcut icon" href="/img/favicon.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="/css/portfolio-style.css">
+    <link rel="stylesheet" href="/css/reference-home.css">
   </head>
-  <body class="portfolio-home">
-    <div class="portfolio-wrapper">
-      <header class="portfolio-header">
-        <a class="portfolio-logo" href="/">lizh</a>
-        <nav class="portfolio-nav" aria-label="Main navigation">
-          <a href="#about">About</a>
-          <a href="#news">News</a>
-          <a href="#featured">Featured</a>
-          <a href="#publications">Publications</a>
-          <a href="#contact">Contact</a>
-          <a href="/blog/">Blog</a>
+  <body class="reference-home theme-dark">
+    <div class="wrapper">
+      <header>
+        <nav aria-label="Main navigation">
+          <a class="site-logo" href="/">lizh</a>
+          <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#featured-publications">Featured Publications</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
         </nav>
       </header>
 
-      <main class="portfolio-container">
-        <section class="portfolio-landing" aria-labelledby="landing-title">
-          <div class="portfolio-intro">
+      <main class="container">
+        <section class="landing" aria-labelledby="landing-title">
+          <div class="text-content">
             <h1 id="landing-title">lizh</h1>
-            <p class="portfolio-subtitle">Blog & Notes · Keep it simple</p>
-            <ul class="portfolio-social" aria-label="Social links">
+            <h4><span class="typing">Blog & Notes · Keep it simple</span></h4>
+            <ul class="social-links" aria-label="Social links">
               <li>
                 <a href="https://github.com/HandsomeLizh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <i class="fab fa-github"></i>
@@ -49,87 +51,98 @@ layout: false
               </li>
             </ul>
           </div>
-          <div class="portfolio-avatar" aria-hidden="true">
-            <img src="/img/avatar.svg" alt="">
+          <div class="image-container" aria-hidden="true">
+            <img class="default-image" src="/img/avatar.svg" alt="">
+            <img class="hover-image" src="/image/preview.gif" alt="">
           </div>
         </section>
 
-        <section id="about" class="portfolio-section" aria-labelledby="about-title">
+        <section id="about" aria-labelledby="about-title">
           <h2 id="about-title">About</h2>
-          <div class="portfolio-copy">
-            <p>这里是 Lizhou 的个人网站，用来记录技术、想法和一些长期整理的笔记。</p>
-            <p>整体风格保持简洁，内容优先，后续可以继续补充项目、经历和研究方向。</p>
+          <div>
+            <p>这里是 Lizhou 的个人网站。</p>
+            <p>内容先清空为简洁占位，后续可以继续补充经历、项目、研究方向和文章入口。</p>
           </div>
         </section>
 
-        <section id="news" class="portfolio-section" aria-labelledby="news-title">
+        <section id="news" aria-labelledby="news-title">
           <h2 id="news-title">Latest News</h2>
-          <div class="portfolio-news-list">
-            <article class="portfolio-news-card">
-              <time datetime="2026-07">Jul 2026</time>
-              <p>Personal website redesigned with a portfolio-style layout.</p>
-            </article>
-            <article class="portfolio-news-card">
-              <time datetime="2025-09">Sep 2025</time>
-              <p>Blog started with the first Hexo post.</p>
-            </article>
+          <div class="news-section">
+            <div class="news-item">
+              <div class="news-date">Jul 2026</div>
+              <div class="news-content">Personal website redesigned.</div>
+            </div>
+            <div class="news-item">
+              <div class="news-date">Sep 2025</div>
+              <div class="news-content">Blog started.</div>
+            </div>
           </div>
         </section>
 
-        <section id="featured" class="portfolio-section" aria-labelledby="featured-title">
+        <section id="featured-publications" aria-labelledby="featured-title">
           <h2 id="featured-title">Featured</h2>
-          <div class="portfolio-card-grid">
-            <article class="portfolio-project-card">
-              <img src="/image/preview.gif" alt="Featured preview" onerror="this.style.display='none'">
-              <div>
-                <h3>Hello World</h3>
-                <p>第一篇博客文章，记录 Hexo 站点的起点。</p>
-                <a href="/2025/09/25/hello-world/">Read post</a>
+          <div class="publications-grid">
+            <article class="publication-entry">
+              <img class="publication-image" src="/image/preview.gif" alt="Featured preview" onerror="this.style.display='none'">
+              <div class="publication-content">
+                <h2>Hello World</h2>
+                <p class="publication-date">Sep 2025</p>
+                <p class="publication-venue">Blog Post</p>
+                <p>第一篇博客文章，记录站点的起点。</p>
+                <div class="publication-links">
+                  <a href="/2025/09/25/hello-world/" aria-label="Read post"><i class="fas fa-file-alt"></i></a>
+                </div>
               </div>
             </article>
           </div>
         </section>
 
-        <section id="publications" class="portfolio-section" aria-labelledby="publications-title">
+        <section id="publications" aria-labelledby="publications-title">
           <h2 id="publications-title">Publications</h2>
-          <div class="portfolio-card-grid">
-            <article class="portfolio-project-card">
-              <div>
-                <h3>Blog Notes</h3>
+          <div class="publications-grid">
+            <article class="publication-entry">
+              <div class="publication-content">
+                <h2>Blog Notes</h2>
+                <p class="publication-date">Ongoing</p>
+                <p class="publication-venue">Notes</p>
                 <p>技术文章和学习笔记会集中沉淀在博客列表里。</p>
-                <a href="/blog/">View blog</a>
+                <div class="publication-links">
+                  <a href="/blog/" aria-label="View blog"><i class="fas fa-book-open"></i></a>
+                </div>
               </div>
             </article>
-            <article class="portfolio-project-card">
-              <div>
-                <h3>Archives</h3>
+            <article class="publication-entry">
+              <div class="publication-content">
+                <h2>Archives</h2>
+                <p class="publication-date">Timeline</p>
+                <p class="publication-venue">Archive</p>
                 <p>按时间线浏览所有已发布内容。</p>
-                <a href="/archives/">View archives</a>
+                <div class="publication-links">
+                  <a href="/archives/" aria-label="View archives"><i class="fas fa-archive"></i></a>
+                </div>
               </div>
             </article>
           </div>
         </section>
 
-        <section id="contact" class="portfolio-section" aria-labelledby="contact-title">
+        <section id="contact" aria-labelledby="contact-title">
           <h2 id="contact-title">Contact</h2>
-          <ul class="portfolio-social portfolio-contact-list">
+          <ul class="social-links contact-links">
             <li>
-              <a href="https://github.com/HandsomeLizh" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/HandsomeLizh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i class="fab fa-github"></i>
-                <span>GitHub</span>
               </a>
             </li>
             <li>
-              <a href="/blog/">
+              <a href="/blog/" aria-label="Blog">
                 <i class="fas fa-book-open"></i>
-                <span>Blog</span>
               </a>
             </li>
           </ul>
         </section>
       </main>
 
-      <footer class="portfolio-footer">
+      <footer>
         <p>© 2025 - 2026 By Lizhou</p>
       </footer>
     </div>
